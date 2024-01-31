@@ -45,7 +45,7 @@ interface ActivitiesParticipation {
   removeParticipant(): void;
 }
 
-class ActivitiesI implements ActivitiesRepository, ActivitiesManagement, ActivitiesParticipation {
+class Activities_I implements ActivitiesRepository, ActivitiesManagement, ActivitiesParticipation {
   addNew() {}
   remove() {}
   cancel() {}
@@ -57,7 +57,7 @@ class ActivitiesI implements ActivitiesRepository, ActivitiesManagement, Activit
 
 class AppI {
   main() {
-    const activities: ActivitiesI = new ActivitiesI();
+    const activities: Activities = new Activities_I();
     this.createActivity(activities);
     this.enrollParticipant(activities);
     this.markActivityAsFinished(activities);

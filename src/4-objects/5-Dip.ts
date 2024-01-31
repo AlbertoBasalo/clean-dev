@@ -18,26 +18,26 @@ export class Payments {
 }
 
 // ✅
-interface Payment {
+interface Pay {
   pay(paymentInfo: any): void;
 }
-export class CreditCardPayment implements Payment {
+export class CreditCardPayment implements Pay {
   pay(paymentInfo: any) {
     // pay with credit card
   }
 }
-export class BankTransferPayment implements Payment {
+export class BankTransferPayment implements Pay {
   pay(paymentInfo: any) {
     // pay with bank transfer
   }
 }
-export class PaypalPayment implements Payment {
+export class PaypalPayment implements Pay {
   pay(paymentInfo: any) {
     // pay with paypal
   }
 }
-export class PaymentsD {
-  pay(method: Payment, paymentInfo: any) {
+export class Payments_D {
+  pay(method: Pay, paymentInfo: any) {
     method.pay(paymentInfo);
   }
 }
